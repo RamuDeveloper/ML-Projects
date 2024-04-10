@@ -13,7 +13,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 
   <title>
     Giftos
@@ -164,7 +164,7 @@
                   </div>
                   <div class="col-md-5 ">
                     <div class="img-box">
-                      <img src="images/slider-img.png" alt="" />
+                      <img src="{% static 'images/slider-img.png' %}" alt="" />
                     </div>
                   </div>
                 </div>
@@ -218,13 +218,15 @@
                   </span>
                 </h6>
               </div>
+              {% if obj.new%}
               <div class="new">
                 <span>
-                  {% if obj.new%}
+                 
                   New
-                  {%endif%}
+                 
                 </span>
               </div>
+              {%endif%}
             </a>
           </div>
         </div>
@@ -540,7 +542,7 @@
           <div class="col-md-5">
             <div class="img_container">
               <div class="img-box">
-                <img src="images/gifts.png" alt="">
+                <img src="{% static 'images/gifts.png' %}" alt="">
               </div>
             </div>
           </div>
@@ -791,11 +793,11 @@
   <!-- end info section -->
 
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
-  <script src="js/custom.js"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
 
 </body>
 

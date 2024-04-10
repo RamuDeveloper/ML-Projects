@@ -42,8 +42,13 @@ def home(request):
     p7.price=200
     p7.image='p7.png'
     p7.new=True
+    p8=Products()
+    p8.name='Rings'
+    p8.price=800
+    p8.image='p5.png'
+    p8.new=True
     
-    objs=[p1,p2,p3,p4,p5,p6,p7]
+    objs=[p1,p2,p3,p4,p5,p6,p7,p8]
     return render(request,'index.html',{'objs':objs})
 # Create your views here.
 
