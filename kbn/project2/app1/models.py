@@ -7,3 +7,8 @@ class Products(models.Model):
     name=models.CharField(max_length=100)
     price =models.IntegerField(default=0)
     new =models.BooleanField(default=True)
+
+def get_name(self):
+        return self.name
+
+
