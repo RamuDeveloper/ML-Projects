@@ -56,6 +56,7 @@
                 <form class="form-inline ">
                     <div class="login_text">
                         <ul>
+                            <li><a href="{% url 'logout' %}" class="text-danger">Logout</a></li>
                             <li><a href="#"><img src="{% static 'images/user-icon.png' %}"></a></li>
                             <li><a href="#"><img src="{% static 'images/bag-icon.png' %}"></a></li>
                             <li><a href="#"><img src="{% static 'images/search-icon.png' %}"></a></li>
@@ -157,7 +158,8 @@
                                     <ul>
                                         <li class="active"><a href="{% url 'delete' item.id %}"
                                                 class="bg-danger">Delete</a></li>
-                                        <li><a href="{% url 'edit' item.id %}" class="bg-primary text-white text-xl fw-bold">edit</a></li>
+                                        <li><a href="{% url 'edit' item.id %}"
+                                                class="bg-primary text-white text-xl fw-bold">edit</a></li>
                                     </ul>
                                 </div>
                                 <h3 class="price_text">Price ${{item.price}}</h3>
